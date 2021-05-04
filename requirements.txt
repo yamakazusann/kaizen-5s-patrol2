@@ -1,0 +1,10 @@
+django
+gunicorn
+matplotlib
+pandas
+japanize_matplotlib
+matplotlib.pyplot
+io
+seaborn
+numpy
+datetime

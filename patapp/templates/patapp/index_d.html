@@ -1,0 +1,66 @@
+{% load static %}
+<!doctype html>
+<html lang='ja'>
+    <head>
+        <meta charset="utf-8">
+        <title>{{title}}</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrao/4.3.1/css/bootstrap.min.css"
+    crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </head>
+    <body class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+            <a class="navbar-brand" href="{% url 'zentai' %}">5Sパトロールメイン</a>
+            <a class="navbar-brand" href="{% url 'kaizen_zentai' %}">改善メイン</a>
+            <a class="navbar-brand" href="{% url 'logout' %}">{{user}}:ログアウト</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"href="#" id="navbarDropdownMenuLink" role="button" style=color:white data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                チーム別データ入力
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="{% url 'index' %}">チーム:{{team_all_1z}}</a>
+                    <a class="dropdown-item" href="{% url 'index_a' %}">チーム:{{team_all_2z}}</a>
+                    <a class="dropdown-item" href="{% url 'index_b' %}">チーム:{{team_all_3z}}</a>
+                    <a class="dropdown-item" href="{% url 'index_c' %}">チーム:{{team_all_4z}}</a>
+                    <a class="dropdown-item" href="{% url 'index_d' %}">チーム:{{team_all_5z}}</a>
+                    <a class="dropdown-item" href="{% url 'index_e' %}">チーム:{{team_all_6z}}</a>
+                    
+                </div>
+            
+            </li>
+        </nav>
+        <h1 class="display-4 text-primary">
+            {{title}}   /チーム：{{team_all_5z}}</h1>
+            <p class="h5 mt-4">{{message|safe}}</p> 
+            <h6><a href="{% url 'saiten_d' %}">>>アンケート形式で点数を測定する</a></h6>
+            <h6><a href="{% url 'plot_d' %}">>>パトロール結果をグラフで見る</a></h6>
+            <table class="table">
+                <tr>
+                    <th>月</th>
+                    <th>整理</th>
+                    <th>整頓</th>
+                    <th>清掃</th>
+                    <th>清潔</th>
+                    <th>躾</th>
+                </tr>
+            {% for item in data %}
+                <tr>
+                    <td>{{item.tuki}}</td>
+                    <td>{{item.seiri_in}}</td>
+                    <td>{{item.seiton_in}}</td>
+                    <td>{{item.seisou_in}}</td>
+                    <td>{{item.seiketu_in}}</td>
+                    <td>{{item.situke_in}}</td>
+                    <td><a href="{% url 'edit_d' item.tuki %}">数値変更する</a></td>
+                </tr>
+            {% endfor %}
+            </table>
+    </body>
+    <footer>
+        <p></p>
+    </footer>
+</html>

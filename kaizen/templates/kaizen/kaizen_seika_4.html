@@ -1,0 +1,62 @@
+{% load static %}
+<!doctype html>
+<html lang='ja'>
+    <head>
+        <meta charset="utf-8">
+        <title>{{title}}</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrao/4.3.1/css/bootstrap.min.css"
+    crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </head>
+    <body class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+            <a class="navbar-brand" href="{% url 'zentai' %}">5Sパトロールメイン</a>
+            <a class="navbar-brand" href="{% url 'kaizen_zentai' %}">改善メイン</a>
+            <a class="navbar-brand" href="{% url 'logout' %}">{{user}}:ログアウト</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"href="#" id="navbarDropdownMenuLink" role="button" style=color:white data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                チーム別データ入力
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="{% url 'kaizen_seika_1' %}">チーム:{{team_kaizen1_kijun_team_name}}</a>
+                    <a class="dropdown-item" href="{% url 'kaizen_seika_2' %}">チーム:{{team_kaizen2_kijun_team_name}}</a>
+                    <a class="dropdown-item" href="{% url 'kaizen_seika_3' %}">チーム:{{team_kaizen3_kijun_team_name}}</a>
+                    <a class="dropdown-item" href="{% url 'kaizen_seika_4' %}">チーム:{{team_kaizen4_kijun_team_name}}</a>
+                    <a class="dropdown-item" href="{% url 'kaizen_seika_5' %}">チーム:{{team_kaizen5_kijun_team_name}}</a>
+                    <a class="dropdown-item" href="{% url 'kaizen_seika_6' %}">チーム:{{team_kaizen6_kijun_team_name}}</a>
+                    
+                </div>
+            
+            </li>
+        </nav>
+        <h1 class="display-4 text-primary">
+            {{title}}   /チーム：{{team_kaizen4_kijun_team_name}}</h1>
+            
+            <p class="h5 mt-4">{{message|safe}}</p> 
+            <h6><a href="{% url 'team_kaizen4_4' %}">>>チーム:{{team_kaizen4_kijun_team_name}}のチーム名,改善合理化目標,人数の設定</a></h6>
+            <h6><a href="{% url 'plot_k4' %}">>>合理化結果をグラフで見る</a></h6>
+            <h6><a href="{% url 'plot_k4t' %}">>>改善提案提出結果をグラフで見る</a></h6>
+            <table class="table">
+                <tr>
+                    <th>月</th>
+                    <th>チーム別提出した改善枚数</th>
+                    <th>チーム別達成した改善金額</th>
+                </tr>
+            {% for item in data %}
+                <tr>
+                    <td>{{item.tuki}}</td>
+                    <td>{{item.output_kaizenteian}}</td>
+                    <td>{{item.output_kingaku}}</td>
+                    <td><a href="{% url 'kaizen_seika_4edit' item.tuki %}">数値変更する</a></td>
+                </tr>
+            {% endfor %}
+            </table>
+    </body>
+    <footer>
+        <p></p>
+    </footer>
+</html>

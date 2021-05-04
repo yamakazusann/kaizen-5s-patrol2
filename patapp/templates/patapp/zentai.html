@@ -1,0 +1,187 @@
+{% load static %}
+<!doctype html>
+<html lang='ja'>
+    <head>
+        <meta charset="utf-8">
+        <title>{{title}}</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrao/4.3.1/css/bootstrap.min.css"
+    crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </head>
+    <nav class="navbar navbar-expand-lg  navbar-dark bg-info">
+        <a class="navbar-brand" href="{% url 'zentai' %}">5Sパトロールメイン</a>
+        <a class="navbar-brand" href="{% url 'kaizen_zentai' %}">改善メイン</a>
+        <a class="navbar-brand" href="{% url 'logout' %}">{{user}}:ログアウト</a>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle"href="#" id="navbarDropdownMenuLink" role="button" style=color:white data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            チーム別データ入力
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="{% url 'index' %}">チーム:{{team_all_1z}}</a>
+                <a class="dropdown-item" href="{% url 'index_a' %}">チーム:{{team_all_2z}}</a>
+                <a class="dropdown-item" href="{% url 'index_b' %}">チーム:{{team_all_3z}}</a>
+                <a class="dropdown-item" href="{% url 'index_c' %}">チーム:{{team_all_4z}}</a>
+                <a class="dropdown-item" href="{% url 'index_d' %}">チーム:{{team_all_5z}}</a>
+                <a class="dropdown-item" href="{% url 'index_e' %}">チーム:{{team_all_6z}}</a>
+                
+            </div>
+        
+        </li>
+    </nav>
+    <body class="container">
+        <h1 class="display-4 text-primary">
+            {{title}}</h1>
+            <p class="h5 mt-4">{{message|safe}}</p> 
+            <div  class="border border-info">
+            
+            <h4><a href="{% url 'index' %}">>>チーム:{{team_all_1z}}</a></h4>
+            <h4><a href="{% url 'index_a' %}">>>チーム:{{team_all_2z}}</a></h4>
+            <h4><a href="{% url 'index_b' %}">>>チーム:{{team_all_3z}}</a></h4>
+            <h4><a href="{% url 'index_c' %}">>>チーム:{{team_all_4z}}</a></h4>
+            <h4><a href="{% url 'index_d' %}">>>チーム:{{team_all_5z}}</a></h4>
+            <h4><a href="{% url 'index_e' %}">>>チーム:{{team_all_6z}}</a></h4>
+            </div>
+
+            <p class="h5 mt-4">{{message_2|safe}}</p>
+            <div  class="border border-info">
+                
+                <p class="h5 mt-4">{{message_4|safe}}</p>
+                
+                <table class="table">
+                    <tr>
+                        <th>チーム名</th>
+                        <th>4月</th>
+                        <th>5月</th>
+                        <th>6月</th>
+                        <th>7月</th>
+                        <th>8月</th>
+                        <th>9月</th>
+                        <th>10月</th>
+                        <th>11月</th>
+                        <th>12月</th>
+                        <th>1月</th>
+                        <th>2月</th>
+                        <th>3月</th>
+                        <th>記入月までの平均点数</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>{{team_all_1z}}</td>
+                        <td>{{team_a_1}}</td>
+                        <td>{{team_a_2}}</td>
+                        <td>{{team_a_3}}</td>
+                        <td>{{team_a_4}}</td>
+                        <td>{{team_a_5}}</td>
+                        <td>{{team_a_6}}</td>
+                        <td>{{team_a_7}}</td>
+                        <td>{{team_a_8}}</td>
+                        <td>{{team_a_9}}</td>
+                        <td>{{team_a_10}}</td>
+                        <td>{{team_a_11}}</td>
+                        <td>{{team_a_12}}</td>
+                        <td>{{team_score_ave_1}}</td>
+                    </tr>
+    
+                    <tr>
+                        <td>{{team_all_2z}}</td>
+                        <td>{{team_b_1}}</td>
+                        <td>{{team_b_2}}</td>
+                        <td>{{team_b_3}}</td>
+                        <td>{{team_b_4}}</td>
+                        <td>{{team_b_5}}</td>
+                        <td>{{team_b_6}}</td>
+                        <td>{{team_b_7}}</td>
+                        <td>{{team_b_8}}</td>
+                        <td>{{team_b_9}}</td>
+                        <td>{{team_b_10}}</td>
+                        <td>{{team_b_11}}</td>
+                        <td>{{team_b_12}}</td>
+                        <td>{{team_score_ave_2}}</td>
+                    </tr>
+    
+                    <tr>
+                        <td>{{team_all_3z}}</td>
+                        <td>{{team_c_1}}</td>
+                        <td>{{team_c_2}}</td>
+                        <td>{{team_c_3}}</td>
+                        <td>{{team_c_4}}</td>
+                        <td>{{team_c_5}}</td>
+                        <td>{{team_c_6}}</td>
+                        <td>{{team_c_7}}</td>
+                        <td>{{team_c_8}}</td>
+                        <td>{{team_c_9}}</td>
+                        <td>{{team_c_10}}</td>
+                        <td>{{team_c_11}}</td>
+                        <td>{{team_c_12}}</td>
+                        <td>{{team_score_ave_3}}</td>
+                    </tr>
+    
+                    <tr>
+                        <td>{{team_all_4z}}</td>
+                        <td>{{team_d_1}}</td>
+                        <td>{{team_d_2}}</td>
+                        <td>{{team_d_3}}</td>
+                        <td>{{team_d_4}}</td>
+                        <td>{{team_d_5}}</td>
+                        <td>{{team_d_6}}</td>
+                        <td>{{team_d_7}}</td>
+                        <td>{{team_d_8}}</td>
+                        <td>{{team_d_9}}</td>
+                        <td>{{team_d_10}}</td>
+                        <td>{{team_d_11}}</td>
+                        <td>{{team_d_12}}</td>
+                        <td>{{team_score_ave_4}}</td>
+                    </tr>
+    
+                    <tr>
+                        <td>{{team_all_5z}}</td>
+                        <td>{{team_e_1}}</td>
+                        <td>{{team_e_2}}</td>
+                        <td>{{team_e_3}}</td>
+                        <td>{{team_e_4}}</td>
+                        <td>{{team_e_5}}</td>
+                        <td>{{team_e_6}}</td>
+                        <td>{{team_e_7}}</td>
+                        <td>{{team_e_8}}</td>
+                        <td>{{team_e_9}}</td>
+                        <td>{{team_e_10}}</td>
+                        <td>{{team_e_11}}</td>
+                        <td>{{team_e_12}}</td>
+                        <td>{{team_score_ave_5}}</td>
+                    </tr>
+    
+                    <tr>
+                        <td>{{team_all_6z}}</td>
+                        <td>{{team_f_1}}</td>
+                        <td>{{team_f_2}}</td>
+                        <td>{{team_f_3}}</td>
+                        <td>{{team_f_4}}</td>
+                        <td>{{team_f_5}}</td>
+                        <td>{{team_f_6}}</td>
+                        <td>{{team_f_7}}</td>
+                        <td>{{team_f_8}}</td>
+                        <td>{{team_f_9}}</td>
+                        <td>{{team_f_10}}</td>
+                        <td>{{team_f_11}}</td>
+                        <td>{{team_f_12}}</td>
+                        <td>{{team_score_ave_6}}</td>
+                    </tr>
+    
+                </table>
+                <h4><a href="{% url 'plot_z' %}">>>５sパトロール点数推移[チーム別]</a></h4>
+                <h4><a href="{% url 'plot_zz' %}">>>５sパトロール合格率[全チーム]</a></h4>
+            </div> 
+            <p class="h5 mt-4">{{message_3|safe}}</p>
+            <div  class="border border-info">
+            <h4><a href="{% url 'team_name_change' %}">>>チーム名変更</a></h4>
+            <h4><a href="{% url 'goukakuten_change' %}">>>合格点変更</a></h4>
+            </div> 
+    </body>
+    <footer>
+        <p></p>
+    </footer>
+</html>

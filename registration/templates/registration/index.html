@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block main %}
+
+<h2>ログイン:アカウント{{ user }}</h2>
+<h3><a href="{% url 'zentai' %}">5Sパトロールページへ行く</a></h3>
+<h3><a href="{% url 'kaizen_zentai' %}">改善/合理化ページへ行く</a></h3>
+<p><a href="{% url 'logout' %}">ログアウト</a></p>
+{% endblock %}
