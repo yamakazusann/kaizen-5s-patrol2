@@ -516,7 +516,7 @@ def zentai(request):
         'message':'▼チーム別データの記入はこちらから▼',
         'message_2':'▼全データとデータ推移の確認はこちらから▼',
         'message_3':'▼チーム名と合格基準点を変更したい時はこちらから▼',
-        'message_4':f'【JFC・受託加工製造部（愛知加工課/第一,第二）】{ten}以上で合格！{nen}年{now.month}月{now.day}現在',
+        'message_4':f'【JFC・受託加工製造部（愛知加工課/第一,第二）】{ten}以上で合格！{nen}年{now.month}月{now.day}日現在',
         'team_all_1z':team_all_1z,
         'team_all_2z':team_all_2z,
         'team_all_3z':team_all_3z,
@@ -2315,7 +2315,7 @@ def setplt():
             va='bottom'
             )
     plt.title(f'【5Sパトロール結果:チーム{team_all_1z}】',fontsize=30)
-    plt.xlabel(f'{nen}年{now.month}月{now.day}現在【月】',fontsize=23)
+    plt.xlabel(f'{nen}年{now.month}月{now.day}日現在【月】',fontsize=23)
     plt.ylabel(f'{ten}点以上で合格【点】',fontsize=23)
     plt.font='IPAexGothic'
     #ax.set(xlabel='【月】',ylabel='【点】85点以上で合格',title=f'【5Sパトロール結果:チーム{team_all_1z}】',)
@@ -2510,7 +2510,7 @@ def setplt_a():
             va='bottom'
             )
     plt.title(f'【5Sパトロール結果:チーム{team_all_2z}】',fontsize=30)
-    plt.xlabel(f'{nen}年{now.month}月{now.day}現在【月】',fontsize=23)
+    plt.xlabel(f'{nen}年{now.month}月{now.day}日現在【月】',fontsize=23)
     plt.ylabel(f'{ten}点以上で合格【点】',fontsize=23)
     plt.font='IPAexGothic'
     #ax.set(xlabel='【月】',ylabel='【点】85点以上で合格',title=f'【5Sパトロール結果:チーム{team_all_2z}】')
@@ -2706,7 +2706,7 @@ def setplt_b():
             va='bottom'
             )
     plt.title(f'【5Sパトロール結果:チーム{team_all_3z}】',fontsize=30)
-    plt.xlabel(f'{nen}年{now.month}月{now.day}現在【月】',fontsize=23)
+    plt.xlabel(f'{nen}年{now.month}月{now.day}日現在【月】',fontsize=23)
     plt.ylabel(f'{ten}点以上で合格【点】',fontsize=23)
     plt.font='IPAexGothic'
     #ax.set(xlabel='【月】',ylabel='【点】85点以上で合格',title=f'【5Sパトロール結果:チーム{team_all_3z}】')
@@ -2900,7 +2900,7 @@ def setplt_c():
             va='bottom'
             )
     plt.title(f'【5Sパトロール結果:チーム{team_all_4z}】',fontsize=30)
-    plt.xlabel(f'{nen}年{now.month}月{now.day}現在【月】',fontsize=23)
+    plt.xlabel(f'{nen}年{now.month}月{now.day}日現在【月】',fontsize=23)
     plt.ylabel(f'{ten}点以上で合格【点】',fontsize=23)
     plt.font='IPAexGothic'
     #ax.set(xlabel='【月】',ylabel='【点】85点以上で合格',title=f'【5Sパトロール結果:チーム{team_all_4z}】')
@@ -3094,7 +3094,7 @@ def setplt_d():
             va='bottom'
             )
     plt.title(f'【5Sパトロール結果:チーム{team_all_5z}】',fontsize=30)
-    plt.xlabel(f'{nen}年{now.month}月{now.day}現在【月】',fontsize=23)
+    plt.xlabel(f'{nen}年{now.month}月{now.day}日現在【月】',fontsize=23)
     plt.ylabel(f'{ten}点以上で合格【点】',fontsize=23)
     plt.font='IPAexGothic'
     #ax.set(xlabel='【月】',ylabel='【点】85点以上で合格',title=f'【5Sパトロール結果:チーム{team_all_5z}】')
@@ -3290,7 +3290,7 @@ def setplt_e():
             va='bottom'
             )
     plt.title(f'【5Sパトロール結果:チーム{team_all_6z}】',fontsize=30)
-    plt.xlabel(f'{nen}年{now.month}月{now.day}現在【月】',fontsize=23)
+    plt.xlabel(f'{nen}年{now.month}月{now.day}日現在【月】',fontsize=23)
     plt.ylabel(f'{ten}点以上で合格【点】',fontsize=23)
     plt.font='IPAexGothic'
     #ax.set(xlabel='【月】',ylabel='【点】85点以上で合格',title=f'【5Sパトロール結果:チーム{team_all_6z}】')
@@ -3758,7 +3758,7 @@ def setplt_z():
     df_a=pd.DataFrame([[a1,a2,a3,a4,a5,a6,a85,a_h],[b7,b8,b9,b10,b11,b12,b85,b_h],[c13,c14,c15,c16,c17,c18,c85,c_h],[d19,d20,d21,d22,d23,d24,d85,d_h],[e25,e26,e27,e28,e29,e30,e85,e_h],[f31,f32,f33,f34,f35,f36,f85,f_h],[g37,g38,g39,g40,g41,g42,g85,g_h],[h43,h44,h45,h46,h47,h48,h85,h_h],[i49,i50,i51,i52,i53,i54,i85,i_h],[j55,j56,j57,j58,j59,j60,j85,j_h],[k61,k62,k63,k64,k65,k66,k85,k_h],[l67,l68,l69,l70,l71,l72,l85,l_h]],index=index,columns=columns)
     figure(num=None, figsize=(16, 9))
     plt.title('5Sパトロール点数推移[チーム別]',fontsize=30)
-    plt.xlabel(f'{nen}年{now.month}月{now.day}現在【月】',fontsize=25)
+    plt.xlabel(f'{nen}年{now.month}月{now.day}日現在【月】',fontsize=25)
     plt.ylabel('点数【点】',fontsize=25)
     plt.plot(list(df_a.index),df_a[a_a],marker='o',label=a_a)
     plt.plot(list(df_a.index),df_a[b_b],marker='o',label=b_b)
@@ -4121,7 +4121,7 @@ def setplt_zz():
     line_7_kakuritu,line_8_kakuritu,line_9_kakuritu,line_10_kakuritu,line_11_kakuritu,line_12_kakuritu],index=index,columns=columns)
     figure(num=None, figsize=(16, 9))
     plt.title('５sパトロール合格率[全チーム]',fontsize=30)
-    plt.xlabel(f'{nen}年{now.month}月{now.day}現在【月】',fontsize=25)
+    plt.xlabel(f'{nen}年{now.month}月{now.day}日現在【月】',fontsize=25)
     plt.ylabel('合格率【％】',fontsize=25)
     plt.plot(list(df_a.index),df_a[a_a],marker='o',label=a_a)
     plt.legend()

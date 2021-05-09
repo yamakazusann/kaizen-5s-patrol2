@@ -955,7 +955,7 @@ def setplt_k1():
     df_a=pd.DataFrame([[a1,a2],[b1,b2],[c1,c2],[d1,d2],[e1,e2],[f1,f2],[g1,g2],[h1,h2],[i1,i2],[j1,j2],[k1,k2],[l1,l2]],index=index,columns=columns)
     figure(num=None, figsize=(18.5, 9))
     plt.title(f'合理化達成金額[チーム:{team_kaizen1_kijun_team_name}]',fontsize=30)
-    plt.xlabel(f'{nen}年{now.month}月{now.day}現在【月】',fontsize=20)
+    plt.xlabel(f'{nen}年{now.month}月{now.day}日現在【月】',fontsize=20)
     plt.ylabel('金額単位【100万円】',fontsize=20)
     plt.plot(list(df_a.index),df_a[a_a],marker='s',label=a_a)
     plt.plot(list(df_a.index),df_a[b_b],marker='o',label=b_b)
@@ -1097,7 +1097,7 @@ def setplt_k2():
     df_a=pd.DataFrame([[a1,a2],[b1,b2],[c1,c2],[d1,d2],[e1,e2],[f1,f2],[g1,g2],[h1,h2],[i1,i2],[j1,j2],[k1,k2],[l1,l2]],index=index,columns=columns)
     figure(num=None, figsize=(18.5, 9))
     plt.title(f'合理化達成金額[チーム:{team_kaizen2_kijun_team_name}]',fontsize=30)
-    plt.xlabel(f'{nen}年{now.month}月{now.day}現在【月】',fontsize=20)
+    plt.xlabel(f'{nen}年{now.month}月{now.day}日現在【月】',fontsize=20)
     plt.ylabel('金額単位【100万円】',fontsize=20)
     plt.plot(list(df_a.index),df_a[a_a],marker='s',label=a_a)
     plt.plot(list(df_a.index),df_a[b_b],marker='o',label=b_b)
@@ -1239,7 +1239,7 @@ def setplt_k3():
     df_a=pd.DataFrame([[a1,a2],[b1,b2],[c1,c2],[d1,d2],[e1,e2],[f1,f2],[g1,g2],[h1,h2],[i1,i2],[j1,j2],[k1,k2],[l1,l2]],index=index,columns=columns)
     figure(num=None, figsize=(18.5, 9))
     plt.title(f'合理化達成金額[チーム:{team_kaizen3_kijun_team_name}]',fontsize=30)
-    plt.xlabel(f'{nen}年{now.month}月{now.day}現在【月】',fontsize=20)
+    plt.xlabel(f'{nen}年{now.month}月{now.day}日現在【月】',fontsize=20)
     plt.ylabel('金額単位【100万円】',fontsize=20)
     plt.plot(list(df_a.index),df_a[a_a],marker='s',label=a_a)
     plt.plot(list(df_a.index),df_a[b_b],marker='o',label=b_b)
@@ -1380,7 +1380,7 @@ def setplt_k4():
     df_a=pd.DataFrame([[a1,a2],[b1,b2],[c1,c2],[d1,d2],[e1,e2],[f1,f2],[g1,g2],[h1,h2],[i1,i2],[j1,j2],[k1,k2],[l1,l2]],index=index,columns=columns)
     figure(num=None, figsize=(18.5, 9))
     plt.title(f'合理化達成金額[チーム:{team_kaizen4_kijun_team_name}]',fontsize=30)
-    plt.xlabel(f'{nen}年{now.month}月{now.day}現在【月】',fontsize=20)
+    plt.xlabel(f'{nen}年{now.month}月{now.day}日現在【月】',fontsize=20)
     plt.ylabel('金額単位【100万円】',fontsize=20)
     plt.plot(list(df_a.index),df_a[a_a],marker='s',label=a_a)
     plt.plot(list(df_a.index),df_a[b_b],marker='o',label=b_b)
@@ -1522,7 +1522,7 @@ def setplt_k5():
     df_a=pd.DataFrame([[a1,a2],[b1,b2],[c1,c2],[d1,d2],[e1,e2],[f1,f2],[g1,g2],[h1,h2],[i1,i2],[j1,j2],[k1,k2],[l1,l2]],index=index,columns=columns)
     figure(num=None, figsize=(18.5, 9))
     plt.title(f'合理化達成金額[チーム:{team_kaizen5_kijun_team_name}]',fontsize=30)
-    plt.xlabel(f'{nen}年{now.month}月{now.day}現在【月】',fontsize=20)
+    plt.xlabel(f'{nen}年{now.month}月{now.day}日現在【月】',fontsize=20)
     plt.ylabel('金額単位【100万円】',fontsize=20)
     plt.plot(list(df_a.index),df_a[a_a],marker='s',label=a_a)
     plt.plot(list(df_a.index),df_a[b_b],marker='o',label=b_b)
@@ -1665,7 +1665,7 @@ def setplt_k6():
     df_a=pd.DataFrame([[a1,a2],[b1,b2],[c1,c2],[d1,d2],[e1,e2],[f1,f2],[g1,g2],[h1,h2],[i1,i2],[j1,j2],[k1,k2],[l1,l2]],index=index,columns=columns)
     figure(num=None, figsize=(18.5, 9))
     plt.title(f'合理化達成金額[チーム:{team_kaizen6_kijun_team_name}]',fontsize=30)
-    plt.xlabel(f'{nen}年{now.month}月{now.day}現在【月】',fontsize=20)
+    plt.xlabel(f'{nen}年{now.month}月{now.day}日現在【月】',fontsize=20)
     plt.ylabel('金額単位【100万円】',fontsize=20)
     plt.plot(list(df_a.index),df_a[a_a],marker='s',label=a_a)
     plt.plot(list(df_a.index),df_a[b_b],marker='o',label=b_b)
@@ -1826,7 +1826,7 @@ def setplt_k1t():
     ls='--',
     alpha=0.6)
     plt.title(f'改善提案提出記録:チーム{team_kaizen1_kijun_team_name}({nin}人)',fontsize=30)
-    plt.xlabel(f'{nen}年{now.month}月{now.day}現在【月】',fontsize=23)
+    plt.xlabel(f'{nen}年{now.month}月{now.day}日現在【月】',fontsize=23)
     plt.ylabel(f'提出目標{zen_mokuhyou}枚以上【枚】',fontsize=23)
     fig.show()
 
@@ -1986,7 +1986,7 @@ def setplt_k2t():
     ls='--',
     alpha=0.6)
     plt.title(f'改善提案提出記録:チーム{team_kaizen2_kijun_team_name}({nin}人)',fontsize=30)
-    plt.xlabel(f'{nen}年{now.month}月{now.day}現在【月】',fontsize=23)
+    plt.xlabel(f'{nen}年{now.month}月{now.day}日現在【月】',fontsize=23)
     plt.ylabel(f'提出目標{zen_mokuhyou}枚以上【枚】',fontsize=23)
     fig.show()
 
@@ -2142,7 +2142,7 @@ def setplt_k3t():
     ls='--',
     alpha=0.6)
     plt.title(f'改善提案提出記録:チーム{team_kaizen3_kijun_team_name}({nin}人)',fontsize=30)
-    plt.xlabel(f'{nen}年{now.month}月{now.day}現在【月】',fontsize=23)
+    plt.xlabel(f'{nen}年{now.month}月{now.day}日現在【月】',fontsize=23)
     plt.ylabel(f'提出目標{zen_mokuhyou}枚以上【枚】',fontsize=23)
     fig.show()
 
@@ -2295,7 +2295,7 @@ def setplt_k4t():
     ls='--',
     alpha=0.6)
     plt.title(f'改善提案提出記録:チーム{team_kaizen4_kijun_team_name}({nin}人)',fontsize=30)
-    plt.xlabel(f'{nen}年{now.month}月{now.day}現在【月】',fontsize=23)
+    plt.xlabel(f'{nen}年{now.month}月{now.day}日現在【月】',fontsize=23)
     plt.ylabel(f'提出目標{zen_mokuhyou}枚以上【枚】',fontsize=23)
     fig.show()
 
@@ -2450,7 +2450,7 @@ def setplt_k5t():
     ls='--',
     alpha=0.6)
     plt.title(f'改善提案提出記録:チーム{team_kaizen5_kijun_team_name}({nin}人)',fontsize=30)
-    plt.xlabel(f'{nen}年{now.month}月{now.day}現在【月】',fontsize=23)
+    plt.xlabel(f'{nen}年{now.month}月{now.day}日現在【月】',fontsize=23)
     plt.ylabel(f'提出目標{zen_mokuhyou}枚以上【枚】',fontsize=23)
     fig.show()
 
@@ -2605,7 +2605,7 @@ def setplt_k6t():
     ls='--',
     alpha=0.6)
     plt.title(f'改善提案提出記録:チーム{team_kaizen6_kijun_team_name}({nin}人)',fontsize=30)
-    plt.xlabel(f'{nen}年{now.month}月{now.day}現在【月】',fontsize=23)
+    plt.xlabel(f'{nen}年{now.month}月{now.day}日現在【月】',fontsize=23)
     plt.ylabel(f'提出目標{zen_mokuhyou}枚以上【枚】',fontsize=23)
     fig.show()
 
